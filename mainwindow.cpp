@@ -60,7 +60,6 @@ MainWindow::MainWindow(QWidget *parent)
         paredes.push_back(new pared(p_s[i],p_s[i+1],p_s[i+2],p_s[i+3]));
         scene->addItem(paredes.back());
     }
-
 }
 
 MainWindow::~MainWindow()
@@ -77,8 +76,6 @@ void MainWindow::keyPressEvent(QKeyEvent *evento){
              if(personaje->collidesWithItem(monedas.at(i))){
                 scene->removeItem(monedas.at(i));
                  monedas.removeAt(i);
-
-
               }
          }
         //Colicion con muros
@@ -95,8 +92,6 @@ void MainWindow::keyPressEvent(QKeyEvent *evento){
              if(personaje->collidesWithItem(monedas.at(i))){
                 scene->removeItem(monedas.at(i));
                  monedas.removeAt(i);
-
-
               }
          }
 
@@ -106,7 +101,6 @@ void MainWindow::keyPressEvent(QKeyEvent *evento){
                 personaje->Move_abajo();
              }
         }
-
     }
      else if (evento->key()==Qt::Key_Z)
      {
@@ -115,10 +109,7 @@ void MainWindow::keyPressEvent(QKeyEvent *evento){
               if(personaje->collidesWithItem(monedas.at(i))){
                  scene->removeItem(monedas.at(i)); // eliminar moneda de esena
                   monedas.removeAt(i);
-                  delete monedas.at(i);
                   qDebug() << "moneda eliminada";
-
-
                }
           }
          //Colicion con muros
@@ -136,9 +127,7 @@ void MainWindow::keyPressEvent(QKeyEvent *evento){
              if(personaje->collidesWithItem(monedas.at(i))){
                 scene->removeItem(monedas.at(i));
                  monedas.removeAt(i);
-                 delete monedas.at(i);
                  qDebug() << "moneda eliminada";
-
               }
          }
         //Colicion con muros
@@ -147,7 +136,6 @@ void MainWindow::keyPressEvent(QKeyEvent *evento){
                 personaje->Move_derecha();
              }
         }
-
     }
 }
 
