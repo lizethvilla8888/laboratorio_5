@@ -7,35 +7,6 @@ enemy::enemy(int r_, int x, int y)
     posy = y;
     setPos(posx,posy);
 }
-int enemy::getR() const
-{
-    return r;
-}
-
-void enemy::setR(int value)
-{
-    r = value;
-}
-
-int enemy::getPosx() const
-{
-    return posx;
-}
-
-void enemy::setPosx(int value)
-{
-    posx = value;
-}
-
-int enemy::getPosy() const
-{
-    return posy;
-}
-
-void enemy::setPosy(int value)
-{
-    posy = value;
-}
 
 QRectF enemy::boundingRect() const
 {
@@ -46,29 +17,28 @@ void enemy::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWi
 {
     painter->setBrush(Qt::red);
     painter->drawEllipse(boundingRect());
-
 }
 
 void enemy::up()
 {
-    posy -= 1;
+    posy -= 3;
     setPos(posx, posy);
 }
 
 void enemy::down()
 {
-    posy += 1;
+    posy += 3;
     setPos(posx, posy);
 }
 
 void enemy::left()
 {
-    posx -= 1;
+    posx -= 3;
     setPos(posx, posy);
 }
 
 void enemy::right()
 {
-    posx += 1;
+    posx += 3;
     setPos(posx, posy);
 }

@@ -3,5 +3,6 @@
         <file>imagenes/700x700.png</file>
         <file>imagenes/moneda rotatoria.jpg</file>
         <file>imagenes/PACMAN.png</file>
+        <file>imagenes/fondo.jpg</file>
     </qresource>
 </RCC>

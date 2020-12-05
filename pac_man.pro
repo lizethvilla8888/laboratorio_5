@@ -1,4 +1,5 @@
-QT       += core gui
+QT       += core gui\
+         multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -14,14 +15,16 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     moneda.cpp \
-    pared.cpp
+    pared.cpp \
+    puntaje.cpp
 
 HEADERS += \
     cuerpo.h \
     enemy.h \
     mainwindow.h \
     moneda.h \
-    pared.h
+    pared.h \
+    puntaje.h
 
 FORMS += \
     mainwindow.ui
@@ -32,7 +35,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    imagenes.qrc
+    imagenes.qrc \
+    music.qrc
 
 DISTFILES += \
     paredes.txt

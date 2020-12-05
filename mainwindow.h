@@ -5,22 +5,20 @@
 #include <QGraphicsScene>
 #include <QKeyEvent>
 #include <QWidget>
-#include <QGraphicsScene>
 #include <QGraphicsView>
-#include <QTimer>
 #include <QList>
-#include <QFile>
 #include <QString>
 #include <QTextStream>
-#include <QFile> // leer archivos
-#include <QDebug>
-#include <QPixmap>
-#include <QVector>
+#include <QMediaPlayer> // reproducir sonido
+#include <QGraphicsPixmapItem>
+#include <QImage>
+#include <QTimer>
 
 #include "cuerpo.h"
 #include "enemy.h"
 #include "pared.h"
 #include "moneda.h"
+#include "puntaje.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -36,27 +34,26 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-//public slots:
-  //  void moveEnemy();
-
 private:
     Ui::MainWindow *ui;
 
-    //QTimer *timer;
 
     cuerpo *personaje;
     enemy *enemigo;
+    puntaje *puntaje_;
 
     QList<moneda *> monedas;
     QList <pared*> paredes;
 
     QGraphicsScene *scene;
+    QTimer *timer;
 
     void keyPressEvent(QKeyEvent * evento);
     QList<moneda *> eliminarMonedas(QList<moneda *> monedas,int pos);
     void crear_pared(int, int);
     void crear_monedas (int, int);
-     //QList<moneda *> eliminarMonedas(QList<moneda *> monedas,int pos);
+
+public slots:
     void moveEnemy();
 
 };

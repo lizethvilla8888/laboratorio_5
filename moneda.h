@@ -5,6 +5,7 @@
 #include <QGraphicsItem>
 #include <QPainter>
 
+
 class moneda: public QGraphicsItem
 {
     int w,h;

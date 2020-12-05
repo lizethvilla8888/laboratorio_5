@@ -1,5 +1,7 @@
 #include "moneda.h"
 
+
+
 moneda::moneda(int x, int y,int w_, int h_)
 {
     posx = x;
